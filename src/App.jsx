@@ -9,44 +9,44 @@ import Footer from "./components/Footer";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  // const [msg, setMsg] = useState("");
+  const [msg, setMsg] = useState("");
 
-  // useEffect(() => {
-  //   const showMessage = (text) => {
-  //     setMsg(text);
-  //     setTimeout(() => setMsg(""), 2000);
-  //   };
+  useEffect(() => {
+    const showMessage = (text) => {
+      setMsg(text);
+      setTimeout(() => setMsg(""), 2000);
+    };
 
-  //   const handleContextMenu = (e) => {
-  //     e.preventDefault();
-  //     showMessage("© MR rights reserved");
-  //   };
+    const handleContextMenu = (e) => {
+      e.preventDefault();
+      showMessage("© MR rights reserved");
+    };
 
-  //   const handleKeyDown = (e) => {
-  //     if (
-  //       e.key === "F12" ||
-  //       (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
-  //       (e.ctrlKey && e.key === "U")
-  //     ) {
-  //       e.preventDefault();
-  //       showMessage("Inspect blocked");
-  //     }
-  //   };
+    const handleKeyDown = (e) => {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
+        (e.ctrlKey && e.key === "U")
+      ) {
+        e.preventDefault();
+        showMessage("Inspect blocked");
+      }
+    };
 
-  //   const handleSelect = (e) => {
-  //     e.preventDefault();
-  //   };
+    const handleSelect = (e) => {
+      e.preventDefault();
+    };
 
-  //   document.addEventListener("contextmenu", handleContextMenu);
-  //   document.addEventListener("keydown", handleKeyDown);
-  //   document.addEventListener("selectstart", handleSelect);
+    document.addEventListener("contextmenu", handleContextMenu);
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("selectstart", handleSelect);
 
-  //   return () => {
-  //     document.removeEventListener("contextmenu", handleContextMenu);
-  //     document.removeEventListener("keydown", handleKeyDown);
-  //     document.removeEventListener("selectstart", handleSelect);
-  //   };
-  // }, []);
+    return () => {
+      document.removeEventListener("contextmenu", handleContextMenu);
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("selectstart", handleSelect);
+    };
+  }, []);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -57,11 +57,11 @@ function App() {
         <Dynamics />
         <Builds />
         {/* Bottom Toast Message */}
-        {/* {msg && (
+        {msg && (
           <div className="fixed bottom-5 left-1/2 -translate-x-1/2 px-6 py-2 rounded-xl bg-white/10 border border-white/20 text-black dark:text-white text-sm font-mono backdrop-blur-2xl shadow-lg z-100">
             {msg}
           </div>
-        )} */}
+        )}
         <ReachOut />
 
         <Footer />
