@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+   font-size: 14px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 1s ease-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* body {
+  font-family: Arial, Helvetica, sans-serif;
+} */
+html,
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
