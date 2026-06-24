@@ -46,7 +46,7 @@ function ReachOut() {
           </a>
 
           <button
-            onClick={() => alert("LeetCode ki taiyari abhi chal rahi hai 🚀")}
+            onClick={() => alert("Taiyari abhi chal rahi hai 🚀")}
             className="px-5 py-5 rounded-xl bg-black dark:bg-white text-white dark:text-black font-mono tracking-[3px] font-bold hover:scale-[1.05] transition duration-300"
           >
             LeetCode
