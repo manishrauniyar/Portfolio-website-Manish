@@ -287,13 +287,31 @@ export default function ProjectBook3D({ projects = [] }) {
           </div>
         </div>
       </div>
+       {/* Controls */}
+      <div className="mt-15 flex justify-center items-center gap-5">
+        <button
+          onClick={prevPage}
+          disabled={currentPage === 0}
+          className="px-6 py-3 rounded-full text-slate-900 font-bold disabled:opacity-40 disabled:cursor-not-allowed hover:scale-105 transition dark:text-white"
+        >
+          Prev
+        </button>
+
+        <span className="text-slate-300 font-semibold">
+          Page {currentPage} / {projects.length}
+        </span>
+
+        <button
+          onClick={nextPage}
+          disabled={currentPage === projects.length}
+          className="px-6 py-3 rounded-full text-slate-900 font-bold disabled:opacity-40 disabled:cursor-not-allowed hover:scale-105 transition  dark:text-white"
+        >
+          Next
+        </button>
+      </div>
 
       {/* Page number */}
-      <div className="mt-16 flex items-center justify-center gap-5 sm:mt-20 md:mt-24">
-        <span className="font-semibold text-gray-700 dark:text-slate-300">
-          Page {activeIndex + 1} / {projects.length}
-        </span>
-      </div>
+     
     </div>
   );
 }
