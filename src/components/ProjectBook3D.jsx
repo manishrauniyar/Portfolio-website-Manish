@@ -288,7 +288,7 @@ export default function ProjectBook3D({ projects = [] }) {
         </div>
       </div>
        {/* Controls */}
-      <div className="mt-15 flex justify-center items-center gap-5">
+      <div className="mt-1 flex justify-center items-center gap-3">
         <button
           onClick={prevPage}
           disabled={currentPage === 0}
