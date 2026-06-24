@@ -23,12 +23,27 @@ function Hero() {
         that are simple, scalable, and user-focused.
       </p>
 
-      <div className="mt-20 flex justify-center gap-4 animate-slideUp">
-        <a href="#roles" className="px-12 py-5 rounded-2xl bg-black dark:bg-white text-white dark:text-black font-bold hover:scale-105 transition">
+      <div className="mt-14 md:mt-20 flex flex-wrap justify-center items-center gap-3 sm:gap-4 animate-slideUp">
+        <a
+          href="#roles"
+          className="px-7 sm:px-10 md:px-12 py-4 md:py-5 rounded-2xl bg-black dark:bg-white text-white dark:text-black font-bold text-sm sm:text-base hover:scale-105 transition"
+        >
           Impact
         </a>
-        <a href="https://drive.google.com/file/d/1U2x9oYUOezggbhWnkEKRafAF9kfgMerq/view?usp=drive_link" className="px-12 py-5 rounded-2xl bg-black dark:bg-white text-white dark:text-black font-bold hover:scale-105 transition ">Resume</a>
-        <a href="#contact" className="px-12 py-5 rounded-2xl bg-black dark:bg-white text-white dark:text-black font-bold hover:scale-105 transition">
+
+        <a
+          href="https://drive.google.com/file/d/1U2x9oYUOezggbhWnkEKRafAF9kfgMerq/view?usp=drive_link"
+          target="_blank"
+          rel="noreferrer"
+          className="px-7 sm:px-10 md:px-12 py-4 md:py-5 rounded-2xl bg-black dark:bg-white text-white dark:text-black font-bold text-sm sm:text-base hover:scale-105 transition"
+        >
+          Resume
+        </a>
+
+        <a
+          href="#contact"
+          className="px-7 sm:px-10 md:px-12 py-4 md:py-5 rounded-2xl bg-black dark:bg-white text-white dark:text-black font-bold text-sm sm:text-base hover:scale-105 transition"
+        >
           Contact
         </a>
       </div>

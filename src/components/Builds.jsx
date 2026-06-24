@@ -42,8 +42,8 @@ const projects = [
     type: "Full Stack",
     status: "Completed",
     highlight: "AI content generation with admin control",
-    github: "https://github.com/yourusername/stack-stories",
-    live: "https://your-live-link.com",
+    github: "https://github.com/manishrauniyar/Personal-Blog-Platform",
+    live: "",
     gradient: "from-cyan-400 via-blue-500 to-purple-500",
   },
   {
@@ -55,8 +55,8 @@ const projects = [
     type: "AI Healthcare Project",
     status: "Completed",
     highlight: "Automatic hospital department routing using LLMs",
-    github: "https://github.com/yourusername/ai-hospital-email-router",
-    live: "",
+    github: "https://github.com/manishrauniyar/hospital-mail-route",
+    live: "https://hospital-mail-route.vercel.app/",
     gradient: "from-emerald-400 via-cyan-500 to-blue-500",
   },
   {
@@ -68,7 +68,7 @@ const projects = [
     type: "Web App",
     status: "In Progress",
     highlight: "Real-time expense management dashboard",
-    github: "https://github.com/yourusername/expense-tracker",
+    github: "https://github.com/manishrauniyar/Expense-Tracker-",
     live: "",
     gradient: "from-orange-400 via-pink-500 to-rose-500",
   },
@@ -99,6 +99,7 @@ function Builds() {
       <ProjectBook3D projects={projects} />
 
       <div className="relative z-10 grid gap-8 lg:grid-cols-2">
+
         {projects.map((p) => (
           <div
             key={p.no}
@@ -110,37 +111,57 @@ function Builds() {
 
             <div className="relative z-10">
               <p className="font-mono text-sm tracking-[6px]">
-                {p.no} - {p.small}
+                {p.small}
               </p>
 
               <div className="flex items-start justify-between">
                 <h3 className="mt-4 text-4xl font-black">{p.title}</h3>
 
                 <div className="flex gap-3">
-                  <Code size={22} />
-                  <ExternalLink size={22} />
-                </div>
-              </div>
-
-              <p className="mt-8 text-xl leading-relaxed text-gray-700 dark:text-gray-300">
-                {p.desc}
-              </p>
-
-              <div className="mt-8 flex flex-wrap gap-3">
-                {p.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-lg border border-gray-300 px-4 py-2 font-mono text-sm tracking-[3px] dark:border-gray-700 hover:scale-[1.02] transition duration-500 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:scale-110 transition"
                   >
-                    {t}
-                  </span>
-                ))}
+                    <Code size={22} />
+                  </a>
+
+                  <button
+                    onClick={() => {
+                      if (p.live === "") {
+                        alert("Demo not completed");
+                      } else {
+                        window.open(p.live, "_blank", "noopener,noreferrer");
+                      }
+                    }}
+                    className="hover:scale-110 transition cursor-pointer"
+                  >
+                    <ExternalLink size={22} />
+                  </button>
+                  
               </div>
             </div>
+
+            <p className="mt-8 text-xl leading-relaxed text-gray-700 dark:text-gray-300">
+              {p.desc}
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              {p.tech.map((t) => (
+                <span
+                  key={t}
+                  className="rounded-lg border border-gray-300 px-4 py-2 font-mono text-sm tracking-[3px] dark:border-gray-700 hover:scale-[1.02] transition duration-500 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
           </div>
         ))}
-      </div>
-    </section>
+    </div>
+    </section >
   );
 }
 

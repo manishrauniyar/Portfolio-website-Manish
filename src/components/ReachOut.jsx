@@ -28,7 +28,7 @@ function ReachOut() {
         <div className="mt-12  flex flex-wrap justify-center gap-6">
 
           <a
-            href="https://www.linkedin.com/in/YOUR_USERNAME"
+            href="https://www.linkedin.com/in/manishrauniyar8736/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-5 rounded-xl bg-black dark:bg-white text-white dark:text-black font-mono tracking-[3px] font-bold hover:scale-[1.05] transition duration-300"
@@ -37,7 +37,7 @@ function ReachOut() {
           </a>
 
           <a
-            href="https://github.com/YOUR_USERNAME"
+            href="https://github.com/manishrauniyar"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-5 rounded-xl bg-black dark:bg-white text-white dark:text-black font-mono tracking-[3px] font-bold hover:scale-[1.05] transition duration-300"

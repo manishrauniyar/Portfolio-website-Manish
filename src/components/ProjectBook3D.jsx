@@ -288,22 +288,22 @@ export default function ProjectBook3D({ projects = [] }) {
         </div>
       </div>
        {/* Controls */}
-      <div className="mt-1 flex justify-center items-center gap-3">
+      <div className="mt-1 flex justify-center items-center gap-3 ">
         <button
           onClick={prevPage}
           disabled={currentPage === 0}
-          className="px-6 py-3 rounded-full text-slate-900 font-bold disabled:opacity-40 disabled:cursor-not-allowed hover:scale-105 transition dark:text-white"
+          className=" px-6 py-3 rounded-full text-slate-900 font-bold disabled:opacity-40 disabled:cursor-not-allowed hover:scale-105 transition dark:text-white"
         >
           Prev
         </button>
 
         <span className="text-slate-300 font-semibold">
-          Page {currentPage} / {projects.length}
+          Page {currentPage} / {projects.length-1}
         </span>
 
         <button
           onClick={nextPage}
-          disabled={currentPage === projects.length}
+          disabled={currentPage === projects.length-1}
           className="px-6 py-3 rounded-full text-slate-900 font-bold disabled:opacity-40 disabled:cursor-not-allowed hover:scale-105 transition  dark:text-white"
         >
           Next
