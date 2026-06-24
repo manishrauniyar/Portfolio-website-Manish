@@ -11,7 +11,7 @@ function ReachOut() {
       </h1>
 
       <div className="mt-16 rounded-3xl bg-gray-100 dark:bg-[#171717] border border-gray-300 dark:border-gray-800 p-16 text-center">
-        
+
         <div className="mx-auto w-16 h-16 rounded-2xl bg-gray-200 dark:bg-[#222] border grid place-items-center">
           <Mail />
         </div>
@@ -45,14 +45,12 @@ function ReachOut() {
             GitHub
           </a>
 
-          <a
-            href="https://leetcode.com/YOUR_USERNAME"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => alert("LeetCode ki taiyari abhi chal rahi hai 🚀")}
             className="px-5 py-5 rounded-xl bg-black dark:bg-white text-white dark:text-black font-mono tracking-[3px] font-bold hover:scale-[1.05] transition duration-300"
           >
             LeetCode
-          </a>
+          </button>
 
           <a
             href="mailto:yourmail@gmail.com"
