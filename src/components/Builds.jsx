@@ -62,7 +62,7 @@ const projects = [
   {
     no: "03",
     title: "Expense Tracker",
-    small: "Personal Finance Dashboard",
+    small: "SpendWise",
     desc: "A modern expense tracking application that helps users manage daily spending, monitor transactions, view summaries and organize financial data with a clean dashboard UI.",
     tech: ["Next.js", "SQL", "Prisma", "Tailwind CSS", "Authentication"],
     type: "Web App",
