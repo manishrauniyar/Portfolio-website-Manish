@@ -69,7 +69,7 @@ const projects = [
     status: "In Progress",
     highlight: "Real-time expense management dashboard",
     github: "https://github.com/manishrauniyar/Expense-Tracker-",
-    live: "",
+    live: "https://expense-tracker-five-lemon-35.vercel.app",
     gradient: "from-orange-400 via-pink-500 to-rose-500",
   },
   {
