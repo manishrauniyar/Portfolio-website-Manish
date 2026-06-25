@@ -63,7 +63,7 @@ const projects = [
     no: "03",
     title: "Expense Tracker",
     small: "SpendWise",
-    desc: "A modern full-stack expense tracking application that helps users manage daily spending, monitor transactions, track monthly budgets, analyze income vs expenses, and organize financial data with a clean responsive dashboard UI.",
+    desc: "A full-stack expense tracker with secure authentication, transaction management, category-wise spending, monthly budgets, analytics dashboard, and responsive UI.",
     tech: [
       "Next.js",
       "Express.js",
