@@ -63,11 +63,19 @@ const projects = [
     no: "03",
     title: "Expense Tracker",
     small: "SpendWise",
-    desc: "A modern expense tracking application that helps users manage daily spending, monitor transactions, view summaries and organize financial data with a clean dashboard UI.",
-    tech: ["Next.js", "SQL", "Prisma", "Tailwind CSS", "Authentication"],
+    desc: "A modern full-stack expense tracking application that helps users manage daily spending, monitor transactions, track monthly budgets, analyze income vs expenses, and organize financial data with a clean responsive dashboard UI.",
+    tech: [
+      "Next.js",
+      "Express.js",
+      "PostgreSQL",
+      "Neon Database",
+      "Prisma ORM",
+      "Tailwind CSS",
+      "JWT Auth"
+    ],
     type: "Web App",
-    status: "In Progress",
-    highlight: "Real-time expense management dashboard",
+    status: "Live",
+    highlight: "Full-stack expense management dashboard with authentication",
     github: "https://github.com/manishrauniyar/Expense-Tracker-",
     live: "https://expense-tracker-five-lemon-35.vercel.app",
     gradient: "from-orange-400 via-pink-500 to-rose-500",
@@ -139,28 +147,28 @@ function Builds() {
                   >
                     <ExternalLink size={22} />
                   </button>
-                  
+
+                </div>
+              </div>
+
+              <p className="mt-8 text-xl leading-relaxed text-gray-700 dark:text-gray-300">
+                {p.desc}
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                {p.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-lg border border-gray-300 px-4 py-2 font-mono text-sm tracking-[3px] dark:border-gray-700 hover:scale-[1.02] transition duration-500 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+                  >
+                    {t}
+                  </span>
+                ))}
               </div>
             </div>
-
-            <p className="mt-8 text-xl leading-relaxed text-gray-700 dark:text-gray-300">
-              {p.desc}
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              {p.tech.map((t) => (
-                <span
-                  key={t}
-                  className="rounded-lg border border-gray-300 px-4 py-2 font-mono text-sm tracking-[3px] dark:border-gray-700 hover:scale-[1.02] transition duration-500 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
           </div>
         ))}
-    </div>
+      </div>
     </section >
   );
 }
